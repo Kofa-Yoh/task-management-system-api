@@ -1,0 +1,22 @@
+services:
+  task_management_db:
+    container_name: postgres
+    image: postgres:16.1
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=task_management_db
+  task_management_app:
+    container_name: task_management_app
+    image: task_management_app
+    build: .
+    ports:
+      - "8081:8081"
+    environment:
+      - DATABASE_URL=jdbc:postgresql://task_management_db:5432/task_management_db
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=admin
+    depends_on:
+      - task_management_db

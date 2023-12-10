@@ -1,0 +1,3 @@
+insert into users (email, hash, name, password) values ('nikita@gmail.com', '1b41e3cd-f1c3-47db-b040-7fba439bf20d', 'Никита', '$2a$10$y06sGPk0EGf6ipaPSQ9pOeMPUn7pWdBgCETVA0zAG5sbU6zl51zi2') ON CONFLICT DO NOTHING;
+insert into users (email, hash, name, password) values ('masha@gmail.com', '0c10f7aa-01f5-4d01-addc-59251c601708', 'Маша', '$2a$10$y06sGPk0EGf6ipaPSQ9pOeMPUn7pWdBgCETVA0zAG5sbU6zl51zi2') ON CONFLICT DO NOTHING;
+insert into users (email, hash, name, password) values ('leonid@gmail.com', 'f3c887fb-a13f-4fb3-94d1-8f1eb9019a44', 'Леонид', '$2a$10$LKRjZlZd8Cmyj2Us4OwIPud94tIIn2P4bKoiVJjtgIeRz7QmjLCMW') ON CONFLICT DO NOTHING;
